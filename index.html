@@ -1,621 +1,532 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Palak Dwivedi - AI/ML Developer Portfolio showcasing Artificial Intelligence, Generative AI and Machine Learning projects.">
-
-    <title>Palak Dwivedi | AI/ML Developer Portfolio</title>
-
+    <title>Palak Dwivedi | AI/ML Developer</title>
+    <meta name="description" content="Palak Dwivedi - AI/ML Developer and Computer Science Engineering student building intelligent applications.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
+    <div class="background">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
 
-        <a href="#home" class="logo">Palak<span>.</span></a>
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Palak<span>.</span></a>
 
-        <button class="menu-toggle" id="menu-toggle"
-            aria-label="Toggle navigation">
-            ☰
-        </button>
-
-        <nav>
-            <ul class="nav-links" id="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
 
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
     </header>
 
+    <section id="home" class="hero section">
+        <div class="hero-content reveal">
+            <div class="status">
+                <span class="status-dot"></span>
+                Open to learning & opportunities
+            </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+            <p class="hero-subtitle">HELLO, I'M PALAK DWIVEDI</p>
 
-        <div class="hero-content">
-
-            <p class="intro">HELLO, I'M</p>
-
-            <h1>Palak Dwivedi</h1>
-
-            <h2>
-                <span class="typing-text"></span>
-                <span class="cursor">|</span>
-            </h2>
+            <h1>Building intelligent<br>
+                <span class="gradient-text" id="typingText"></span>
+            </h1>
 
             <p class="hero-description">
-                I'm a Computer Science Engineering student specializing
-                in AI & Machine Learning.
-
-                I build intelligent applications using Generative AI,
-                Machine Learning, and Python, turning innovative ideas
-                into practical solutions.
+                Computer Science Engineering student specializing in AI & Machine Learning.
+                I enjoy transforming ideas into practical applications using AI,
+                Python and modern technologies.
             </p>
 
             <div class="hero-buttons">
-                <a href="#projects" class="btn">
-                    View My Projects
+                <a href="#projects" class="btn btn-primary">
+                    Explore Projects <i class="fas fa-arrow-right"></i>
                 </a>
-
                 <a href="#contact" class="btn btn-outline">
-                    Contact Me
+                    Let's Connect
+                </a>
+                <a href="Palak_Dwivedi_Resume.pdf" download class="btn btn-outline">
+                    <i class="fas fa-download"></i> Download Resume
                 </a>
             </div>
 
+            <div class="social-links">
+                <a href="https://github.com/PalakD42" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/palak-dwivedi-019445360/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:palakdwivedi240@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
         </div>
 
+        <div class="hero-card reveal">
+            <div class="profile-card glass">
+                <div class="profile-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+
+                <h3>AI & Machine Learning</h3>
+                <p>Learning · Building · Innovating</p>
+
+                <div class="card-tags">
+                    <span>Python</span>
+                    <span>AI</span>
+                    <span>ML</span>
+                    <span>GenAI</span>
+                </div>
+
+                <div class="card-bottom">
+                    <span><i class="fas fa-code"></i> Developer</span>
+                    <span><i class="fas fa-graduation-cap"></i> Student</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="section-heading reveal">
+            <p class="section-label">WHO I AM</p>
+            <h2>About <span class="gradient-text">Me</span></h2>
+        </div>
 
         <div class="about-container">
-
-            <div class="about-content">
-
-                <p class="about-tag">GET TO KNOW ME</p>
-
-                <h3>
-                    Passionate About Building
-                    <span>Intelligent Solutions</span>
-                </h3>
+            <div class="about-text glass reveal">
+                <h3>Curious mind. <span class="gradient-text">Builder mindset.</span></h3>
 
                 <p>
-                    I am Palak Dwivedi, a B.Tech Computer Science
-                    Engineering student specializing in Artificial
-                    Intelligence and Machine Learning.
+                    I'm a Computer Science Engineering student specializing in
+                    Artificial Intelligence and Machine Learning at Uttaranchal University.
                 </p>
 
                 <p>
-                    I enjoy exploring Generative AI, Machine Learning,
-                    and Python development. I have worked on projects
-                    involving AI-powered content generation, image
-                    generation, chatbots, and predictive models.
+                    My interests include Generative AI, machine learning,
+                    deep learning, and software development. I enjoy building
+                    applications that combine AI models with real-world functionality.
                 </p>
 
                 <p>
-                    I believe in continuous learning, experimenting
-                    with new technologies, and turning innovative
-                    ideas into practical applications.
+                    Through projects and training, I've explored AI-powered
+                    content generation, image generation, chatbots, and
+                    machine learning prediction systems.
                 </p>
 
                 <p>
-                    My goal is to grow as an AI/ML developer and
-                    contribute to meaningful technology-driven solutions.
+                    I'm continuously learning, experimenting, and improving
+                    my technical skills while working toward becoming a
+                    stronger software and AI developer.
                 </p>
-
-                <a href="#projects" class="btn about-btn">
-                    Explore My Work
-                </a>
-
             </div>
 
-
-            <div class="about-highlights">
-
-                <div class="highlight-card">
-                    <span class="highlight-icon">🎓</span>
-
-                    <h4>Education</h4>
-
-                    <p>B.Tech in Computer Science Engineering</p>
-
-                    <small>
-                        AI & Machine Learning Specialization
-                    </small>
+            <div class="stats-grid reveal">
+                <div class="stat-card glass">
+                    <h3>8.5</h3>
+                    <p>CGPA / 10</p>
                 </div>
 
-
-                <div class="highlight-card">
-                    <span class="highlight-icon">🤖</span>
-
-                    <h4>Interests</h4>
-
-                    <p>Artificial Intelligence & Generative AI</p>
-
-                    <small>
-                        Machine Learning and Python Development
-                    </small>
+                <div class="stat-card glass">
+                    <h3>4+</h3>
+                    <p>AI Applications</p>
                 </div>
 
-
-                <div class="highlight-card">
-                    <span class="highlight-icon">💡</span>
-
-                    <h4>Focus</h4>
-
-                    <p>Building AI-powered applications</p>
-
-                    <small>
-                        Learning, Innovation & Problem Solving
-                    </small>
+                <div class="stat-card glass">
+                    <h3>97%</h3>
+                    <p>GenAI Assessment</p>
                 </div>
 
+                <div class="stat-card glass">
+                    <h3>2028</h3>
+                    <p>Graduation</p>
+                </div>
             </div>
-
         </div>
-
     </section>
 
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <div class="section-heading reveal">
+            <p class="section-label">MY TOOLKIT</p>
+            <h2>Technical <span class="gradient-text">Skills</span></h2>
+        </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
+        <div class="skills-grid">
 
-        <h2 class="section-title">
-            My <span>Skills</span>
-        </h2>
-
-        <p class="skills-subtitle">
-            Technologies and tools I use to build intelligent applications.
-        </p>
-
-        <div class="skills-container">
-
-            <!-- AI & Generative AI -->
-            <div class="skill-card">
-
-                <div class="skill-icon">🤖</div>
-
-                <h3>AI & Generative AI</h3>
-
+            <div class="skill-card glass reveal">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h3>Programming</h3>
                 <div class="skill-tags">
-                    <span>Generative AI</span>
-                    <span>LLMs</span>
-                    <span>Groq API</span>
-                    <span>Google Gemini</span>
-                    <span>Hugging Face</span>
-                    <span>Stable Diffusion</span>
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
                 </div>
-
             </div>
 
-
-            <!-- Machine Learning -->
-            <div class="skill-card">
-
-                <div class="skill-icon">🧠</div>
-
-                <h3>Machine Learning & Data Science</h3>
-
+            <div class="skill-card glass reveal">
+                <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI & Machine Learning</h3>
                 <div class="skill-tags">
                     <span>Machine Learning</span>
-                    <span>Scikit-learn</span>
-                    <span>Pandas</span>
-                    <span>NumPy</span>
-                    <span>Data Analysis</span>
-                    <span>Prediction Models</span>
+                    <span>Deep Learning</span>
+                    <span>PyTorch</span>
+                    <span>TensorFlow</span>
                 </div>
-
             </div>
 
-
-            <!-- Programming Languages -->
-            <div class="skill-card">
-
-                <div class="skill-icon">💻</div>
-
-                <h3>Programming Languages</h3>
-
+            <div class="skill-card glass reveal">
+                <div class="skill-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                <h3>Generative AI</h3>
                 <div class="skill-tags">
-                    <span>Python</span>
-                    <span>Java</span>
-                    <span>JavaScript</span>
-                    <span>C</span>
+                    <span>Prompt Engineering</span>
+                    <span>LLMs</span>
+                    <span>AI Agents</span>
+                    <span>RAG</span>
                 </div>
-
             </div>
 
-
-            <!-- Web Development & Tools -->
-            <div class="skill-card">
-
-                <div class="skill-icon">🛠️</div>
-
-                <h3>Web Development & Tools</h3>
-
+            <div class="skill-card glass reveal">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <h3>Database & Data</h3>
                 <div class="skill-tags">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Flask</span>
-                    <span>Streamlit</span>
+                    <span>MongoDB</span>
+                    <span>Vector Search</span>
+                    <span>Data Processing</span>
+                </div>
+            </div>
+
+            <div class="skill-card glass reveal">
+                <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                <h3>Tools</h3>
+                <div class="skill-tags">
                     <span>Git</span>
                     <span>GitHub</span>
+                    <span>VS Code</span>
+                    <span>IntelliJ</span>
                 </div>
+            </div>
 
+            <div class="skill-card glass reveal">
+                <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                <h3>Core CS</h3>
+                <div class="skill-tags">
+                    <span>DSA</span>
+                    <span>OOP</span>
+                    <span>DBMS</span>
+                </div>
             </div>
 
         </div>
-
     </section>
 
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="section-heading reveal">
+            <p class="section-label">WHAT I'VE BUILT</p>
+            <h2>Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-description">
+                AI, machine learning and software projects built while learning and experimenting.
+            </p>
+        </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
-
-        <h2 class="section-title">
-            Featured <span>Projects</span>
-        </h2>
-
-        <p class="projects-subtitle">
-            Explore my work in Artificial Intelligence,
-            Generative AI, and Machine Learning.
-        </p>
-
-        <div class="projects-container">
-
+        <div class="projects-grid">
 
             <!-- Project 1 -->
-            <div class="glass-card">
-                <div class="card-top">
-                    <span class="project-number">01</span>
-                    <span class="project-category">Generative AI</span>
-                </div>
-
+            <article class="project-card glass reveal">
+                <div class="project-number">01</div>
+                <div class="project-icon"><i class="fas fa-book-open"></i></div>
                 <h3>AI Course Content Generator</h3>
-
                 <p>
-                    An AI-powered application that generates structured
-                    course content and academic curricula using the
-                    Groq API.
+                    An AI-powered application that generates structured course content,
+                    learning objectives, syllabus, assessments, and reading materials.
                 </p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Groq API</span>
+                <div class="project-tags">
+                    <span>Python</span><span>Flask</span><span>Groq API</span>
                 </div>
-
-                <a href="https://github.com/PalakD42/AI-Course-Content-Generator"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="github-link">
-                    View on GitHub ↗
-                </a>
-
-            </div>
-
+                <div class="project-links">
+                    <a href="https://github.com/PalakD42/AI-Course-Content-Generator" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </article>
 
             <!-- Project 2 -->
-            <div class="glass-card">
-                <div class="card-top">
-                    <span class="project-number">02</span>
-                    <span class="project-category">Generative AI</span>
-                </div>
-
+            <article class="project-card glass reveal">
+                <div class="project-number">02</div>
+                <div class="project-icon"><i class="fas fa-image"></i></div>
                 <h3>AI Image Generator</h3>
-
                 <p>
-                    A text-to-image generation application that uses
-                    AI models to transform written prompts into
-                    creative images.
+                    A web application that transforms text prompts into AI-generated
+                    images using a text-to-image model.
                 </p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Hugging Face</span>
-                    <span>Stable Diffusion</span>
+                <div class="project-tags">
+                    <span>Python</span><span>Flask</span><span>Stable Diffusion 3</span>
                 </div>
-
-                <a href="https://github.com/PalakD42/ImageGenerator"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="github-link">
-                    View on GitHub ↗
-                </a>
-
-            </div>
-
+                <div class="project-links">
+                    <a href="https://github.com/PalakD42/ImageGenerator" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </article>
 
             <!-- Project 3 -->
-            <div class="glass-card">
-                <div class="card-top">
-                    <span class="project-number">03</span>
-                    <span class="project-category">Generative AI</span>
-                </div>
-
+            <article class="project-card glass reveal">
+                <div class="project-number">03</div>
+                <div class="project-icon"><i class="fas fa-utensils"></i></div>
                 <h3>AI Recipe Generator</h3>
-
                 <p>
-                    An AI-based recipe application that generates
-                    creative recipes, ingredients, cooking steps,
-                    and interesting food facts.
+                    Generates creative recipes from ingredients with cooking steps,
+                    preparation time, and fun facts.
                 </p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>Groq API</span>
+                <div class="project-tags">
+                    <span>Python</span><span>Flask</span><span>Groq API</span>
                 </div>
-
-                <a href="https://github.com/PalakD42/RecipeGenerator"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="github-link">
-                    View on GitHub ↗
-                </a>
-
-            </div>
-
+                <div class="project-links">
+                    <a href="https://github.com/PalakD42/RecipeGenerator" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </article>
 
             <!-- Project 4 -->
-            <div class="glass-card">
-                <div class="card-top">
-                    <span class="project-number">04</span>
-                    <span class="project-category">AI Chatbot</span>
-                </div>
-
+            <article class="project-card glass reveal">
+                <div class="project-number">04</div>
+                <div class="project-icon"><i class="fab fa-telegram"></i></div>
                 <h3>Telegram AI Chatbot</h3>
-
                 <p>
-                    An intelligent Telegram chatbot that uses
-                    Google Gemini to provide AI-powered conversational
-                    responses.
+                    An AI-powered Telegram chatbot offering conversational responses,
+                    coding assistance, and concept explanations using Gemini.
                 </p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Aiogram</span>
-                    <span>Google Gemini</span>
+                <div class="project-tags">
+                    <span>Python</span><span>Aiogram</span><span>Gemini</span>
                 </div>
-
-                <a href="https://github.com/PalakD42/TelegramChatBot"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="github-link">
-                    View on GitHub ↗
-                </a>
-
-            </div>
-
+                <div class="project-links">
+                    <a href="https://github.com/PalakD42/TelegramChatBot" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                    <a href="https://t.me/ShiviiAI_bot" target="_blank" rel="noopener noreferrer">
+                        Bot <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </article>
 
             <!-- Project 5 -->
-            <div class="glass-card">
-                <div class="card-top">
-                    <span class="project-number">05</span>
-                    <span class="project-category">Machine Learning</span>
-                </div>
-
-                <h3>Smart City Traffic Pattern Prediction</h3>
-
+            <article class="project-card glass reveal">
+                <div class="project-number">05</div>
+                <div class="project-icon"><i class="fas fa-traffic-light"></i></div>
+                <h3>Smart City Traffic Prediction</h3>
                 <p>
-                    A machine learning project that analyzes traffic
-                    patterns and explores data-driven traffic
-                    prediction for smarter cities.
+                    A machine learning project analyzing traffic data and predicting
+                    traffic patterns across multiple junctions.
                 </p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Pandas</span>
-                    <span>Scikit-learn</span>
+                <div class="project-tags">
+                    <span>Python</span><span>Random Forest</span><span>ARIMA</span>
                 </div>
-
-                <a href="https://github.com/PalakD42/Smart-City-Traffic-Pattern"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="github-link">
-                    View on GitHub ↗
-                </a>
-
-            </div>
-
-
-            <!-- Project 6 -->
-            <div class="glass-card">
-                <div class="card-top">
-                    <span class="project-number">06</span>
-                    <span class="project-category">Machine Learning</span>
+                <div class="project-links">
+                    <a href="https://github.com/PalakD42/Smart-City-Traffic-Pattern" target="_blank" rel="noopener noreferrer">
+                        GitHub <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
+            </article>
 
+            <article class="project-card glass reveal">
+                <div class="project-number">06</div>
+                <div class="project-icon"><i class="fas fa-chart-line"></i></div>
                 <h3>Insurance Prediction ML App</h3>
-
                 <p>
-                    A machine learning application that predicts
-                    insurance-related outcomes using input data
-                    and predictive models.
+                    A machine learning web app using customer data to predict
+                    the likelihood of purchasing health insurance.
                 </p>
-
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>Machine Learning</span>
-                    <span>Streamlit</span>
+                <div class="project-tags">
+                    <span>Python</span><span>Scikit-learn</span><span>Streamlit</span>
                 </div>
-
-                <div class="project-actions">
-
-                    <a href="https://github.com/PalakD42/Insurance-Prediction-ML-App"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="github-link">
-                        GitHub ↗
+                <div class="project-links">
+                    <a href="https://insurance-prediction-ml-app-xreaampoc79bxjtcpnienk.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                        Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
-
-                    <a href="https://insurance-prediction-ml-app-xreaampoc79bxjtcpnienk.streamlit.app/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="demo-link">
-                        Live Demo ↗
-                    </a>
-
                 </div>
+            </article>
 
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="section-heading reveal">
+            <p class="section-label">MY JOURNEY</p>
+            <h2>Training & <span class="gradient-text">Experience</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item glass reveal">
+                <div class="timeline-dot"></div>
+                <p class="timeline-date">August 2026 · 6 Weeks</p>
+                <h3>Generative AI Trainee</h3>
+                <h4>Internshala Trainings</h4>
+                <p>
+                    Completed an intensive Generative AI training program covering
+                    AI concepts and application development. Built four AI applications
+                    and achieved 97% in the final assessment.
+                </p>
+                <div class="project-tags">
+                    <span>Generative AI</span>
+                    <span>Prompt Engineering</span>
+                    <span>AI Applications</span>
+                </div>
+                <span class="achievement">
+                    <i class="fas fa-award"></i> Top Performer
+                </span>
+            </div>
+        </div>
+    </section>
+    <section id="certifications" class="section">
+        <div class="section-heading reveal">
+            <p class="section-label">CONTINUOUS LEARNING</p>
+            <h2>Certifications & <span class="gradient-text">Achievements</span></h2>
+        </div>
+
+        <div class="cert-grid">
+
+            <div class="cert-card glass reveal">
+                <i class="fas fa-certificate"></i>
+                <h3>Certificate Program in Generative AI</h3>
+                <p>Internshala Trainings</p>
+                <span class="cert-badge">Grade A · Top Performer</span>
+            </div>
+
+            <div class="cert-card glass reveal">
+                <i class="fas fa-brain"></i>
+                <h3>Prompt Engineering & AI Agents</h3>
+                <p>UpSkill Campus</p>
+            </div>
+
+            <div class="cert-card glass reveal">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Generative AI Certification</h3>
+                <p>NASSCOM-aligned · SFJ / Skill India / NSDC</p>
+            </div>
+
+            <div class="cert-card glass reveal">
+                <i class="fas fa-briefcase"></i>
+                <h3>Job Preparation Training</h3>
+                <p>Internshala Trainings</p>
+            </div>
+
+            <div class="cert-card glass reveal">
+                <i class="fas fa-database"></i>
+                <h3>MongoDB Skill Badges</h3>
+                <p>MongoDB</p>
+                <div class="skill-tags">
+                    <span>MongoDB Basics</span>
+                    <span>Vector Search</span>
+                    <span>AI Agents</span>
+                    <span>RAG</span>
+                    <span>AI Data Strategy</span>
+                </div>
             </div>
 
         </div>
-
     </section>
+    <section id="education" class="section">
+        <div class="section-heading reveal">
+            <p class="section-label">ACADEMIC BACKGROUND</p>
+            <h2>My <span class="gradient-text">Education</span></h2>
+        </div>
 
+        <div class="education-container">
 
-    <!-- Contact Section -->
+            <div class="education-card glass reveal">
+                <div class="education-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <div>
+                    <p class="education-date">2024 – 2028</p>
+                    <h3>Bachelor of Technology</h3>
+                    <h4>Computer Science Engineering · AI & ML</h4>
+                    <p>Uttaranchal University</p>
+                    <span class="education-score">CGPA: 8.5 / 10</span>
+                </div>
+            </div>
+
+            <div class="education-card glass reveal">
+                <div class="education-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div>
+                    <p class="education-date">2024</p>
+                    <h3>Class XII · CBSE</h3>
+                    <h4>Vishnu Bhagwan Public School</h4>
+                    <span class="education-score">80%</span>
+                </div>
+            </div>
+
+            <div class="education-card glass reveal">
+                <div class="education-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <div>
+                    <p class="education-date">2022</p>
+                    <h3>Class X · CBSE</h3>
+                    <h4>Vishnu Bhagwan Public School</h4>
+                    <span class="education-score">86%</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <section id="contact" class="section contact-section">
+        <div class="contact-card glass reveal">
+            <p class="section-label">LET'S CONNECT</p>
+            <h2>Have an opportunity or<br>
+                <span class="gradient-text">idea in mind?</span>
+            </h2>
+            <p>
+                I'm always interested in learning, building, and exploring
+                opportunities in AI, Machine Learning, and Software Development.
+            </p>
 
-        <h2 class="section-title">
-            Get In <span>Touch</span>
-        </h2>
+            <a href="mailto:palakdwivedi240@gmail.com" class="btn btn-primary">
+                Get in Touch <i class="fas fa-paper-plane"></i>
+            </a>
 
-        <p class="contact-subtitle">
-            Have an opportunity, project idea, or just want to connect?
-            I'd love to hear from you!
-        </p>
-
-        <div class="contact-container">
-
-
-            <!-- Contact Information -->
-            <div class="contact-info">
-
-                <h3>Let's Connect!</h3>
-
-                <p>
-                    I'm always interested in learning, collaborating,
-                    and exploring opportunities in AI, Machine Learning,
-                    and Software Development.
-                </p>
-
-
-                <div class="contact-item">
-
-                    <span>📧</span>
-
-                    <div>
-                        <h4>Email</h4>
-
-                        <a href="mailto:YOUR_EMAIL@example.com">
-                            palakdwivedi240@gmail.com
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <span>💻</span>
-
-                    <div>
-                        <h4>GitHub</h4>
-
-                        <a href="https://github.com/PalakD42"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            github.com/PalakD42
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <span>🔗</span>
-
-                    <div>
-                        <h4>LinkedIn</h4>
-
-                        <a href="https://www.linkedin.com/in/palak-dwivedi-019445360/" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
-                        Connect on LinkedIn
-                        </a>
-                    </div>
-
-                </div>
-
+            <div class="contact-socials">
+                <a href="https://github.com/PalakD42" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/palak-dwivedi-019445360/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
             </div>
-
-
-            <!-- Contact Form -->
-            <form class="contact-form" id="contactForm">
-
-                <h3>Send Me a Message</h3>
-
-                <input
-                    type="text"
-                    id="name"
-                    placeholder="Your Name"
-                    required
-                >
-
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                >
-
-                <input
-                    type="text"
-                    id="subject"
-                    placeholder="Subject"
-                    required
-                >
-
-                <textarea
-                    id="message"
-                    placeholder="Write your message..."
-                    rows="5"
-                    required
-                ></textarea>
-
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
-
-            </form>
-
         </div>
-
     </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-
-        <p>
-            © <span id="year"></span> Palak Dwivedi.
-            All Rights Reserved.
-        </p>
+    <footer>
+        <p>Designed & Built by <span class="gradient-text">Palak Dwivedi</span></p>
+        <p class="footer-small">© 2026 · Learning, building, and growing.</p>
     </footer>
 
-
-    <!-- JavaScript -->
     <script src="script.js"></script>
-
 </body>
-
 </html>

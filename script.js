@@ -1,133 +1,127 @@
 
-// ==========================================
-// 1. MOBILE NAVIGATION
-// ==========================================
+/* ==============================
+   TYPING ANIMATION
+================================= */
 
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+const typingText = document.getElementById("typingText");
 
-// Open and close mobile menu
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-
-    // Close menu after clicking a navigation link
-    navLinks.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-        });
-    });
-}
-
-
-// ==========================================
-// 2. TYPING ANIMATION
-// ==========================================
-
-const typingText = document.querySelector(".typing-text");
-
-const roles = [
-    "AI/ML Developer",
-    "Generative AI Enthusiast",
-    "Machine Learning Developer",
-    "Python Developer"
+const words = [
+    "solutions with AI.",
+    "applications with code.",
+    "ideas into reality."
 ];
 
-let roleIndex = 0;
-let characterIndex = 0;
-let isDeleting = false;
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
 function typeEffect() {
-    if (!typingText) return;
+    const currentWord = words[wordIndex];
 
-    const currentRole = roles[roleIndex];
+    if (!deleting) {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
 
-    if (isDeleting) {
-        characterIndex--;
-    } else {
-        characterIndex++;
-    }
-
-    typingText.textContent = currentRole.substring(0, characterIndex);
-
-    let speed = isDeleting ? 50 : 100;
-
-    // When the complete word is typed
-    if (!isDeleting && characterIndex === currentRole.length) {
-        speed = 1500;
-        isDeleting = true;
-    }
-
-    // When the word is completely deleted
-    else if (isDeleting && characterIndex === 0) {
-        isDeleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
-        speed = 500;
-    }
-
-    setTimeout(typeEffect, speed);
-}
-
-// Start typing animation
-if (typingText) {
-    typeEffect();
-}
-
-
-// ==========================================
-// 3. AUTOMATIC FOOTER YEAR
-// ==========================================
-
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}
-
-
-// ==========================================
-// 4. CONTACT FORM
-// ==========================================
-
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const subject = document.getElementById("subject").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        // Check whether all fields are filled
-        if (!name || !email || !subject || !message) {
-            alert("Please fill in all the fields.");
+        if (charIndex === currentWord.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
             return;
         }
+    } else {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
 
-        // Replace this with your actual email address
-        const myEmail = "YOUR_EMAIL@example.com";
+        if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
 
-        const mailSubject = encodeURIComponent(subject);
-
-        const mailBody = encodeURIComponent(
-            `Hello Palak,
-
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}`
-        );
-
-        // Open the user's default email application
-        window.location.href =
-            `mailto:${myEmail}?subject=${mailSubject}&body=${mailBody}`;
-
-        alert("Your email application will open. Please send your message there.");
-
-        contactForm.reset();
-    });
+    setTimeout(typeEffect, deleting ? 50 : 100);
 }
+
+typeEffect();
+
+
+/* ==============================
+   MOBILE NAVIGATION
+================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+
+    const icon = menuBtn.querySelector("i");
+
+    if (navLinks.classList.contains("show")) {
+        icon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+        icon.classList.replace("fa-xmark", "fa-bars");
+    }
+});
+
+// Close menu after clicking a navigation link
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+
+        const icon = menuBtn.querySelector("i");
+        icon.classList.replace("fa-xmark", "fa-bars");
+    });
+});
+
+
+/* ==============================
+   SCROLL REVEAL
+================================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach(element => {
+    revealObserver.observe(element);
+});
+
+
+/* ==============================
+   ACTIVE NAV LINK
+================================= */
+
+const sections = document.querySelectorAll("section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+    let currentSection = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionBottom
+        ) {
+            currentSection = section.getAttribute("id");
+        }
+    });
+
+    navItems.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+        }
+    });
+});
